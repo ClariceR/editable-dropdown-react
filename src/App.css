@@ -2,37 +2,56 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dropdown-categories__wrapper {
+  /* border: 1px solid green; */
+  margin-top: 8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dropdown-categories__title {
+  /* border: 1px solid red; */
+  font-weight: normal;
+  font-size: 16px;
+  justify-self: end;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.dropdown-categories__dropdown {
+  /* border: 1px solid yellowgreen; */
+  justify-self: start;
+}
+
+.dropdown-categories__handler {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: 1px solid gray;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  padding: 0.2rem 1rem;
+  position: relative;
+  width: 160px;
 }
 
-.App-link {
-  color: #61dafb;
+.v {
+  background-color: lightblue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dropdown-categories__list {
+  border: 1px solid gray;
+  border-radius: 3px;
+  display: flex;
+  flex-flow: column;
+  max-width: 50rem;
+  min-width: 180px;
+  position: absolute;
+  top: 193px;
+  width: max-content;
+  padding-top: 10px;
+}
+
+.dropdown-categories__footer {
+  border-top: 1px solid var(--base-border-color);
+  padding: 14px 20px;
+  margin-top: 80px;
 }
