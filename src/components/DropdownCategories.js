@@ -1,9 +1,8 @@
 import React from "react";
+import CategoryItem from "./CategoryItem";
 
 function DropdownCategories({ categoriesList, handleAddCategory }) {
-  const categoriesNames = categoriesList.map((category) => (
-    <li key={category.name}>{category.name}</li>
-  ));
+  const categoriesNames = categoriesList.map((category) => <CategoryItem key={category.name} categoryName={category.name}/>);
 
   return (
     <div className="dropdown-categories__wrapper">
@@ -16,11 +15,13 @@ function DropdownCategories({ categoriesList, handleAddCategory }) {
           </p>
         </div>
         <div className="dropdown-categories__list">
-          <ul>{categoriesNames}</ul>
+          <div>{categoriesNames}</div>
         </div>
 
         <div className="dropdown-categories__footer">
-          <a href="#" onClick={handleAddCategory}>+ Add category</a>
+          <a href="#" onClick={handleAddCategory}>
+            + Add category
+          </a>
         </div>
       </div>
     </div>
