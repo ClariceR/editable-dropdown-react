@@ -1,9 +1,9 @@
 import React from "react";
 import CategoryItem from "./CategoryItem";
 
-function DropdownCategories({ categoriesList, handleAddCategory, toggle }) {
+function DropdownCategories({ categoriesList, toggle, handleEditButton }) {
   const categoriesNames = categoriesList.map((category) => (
-    <CategoryItem key={category.id} categoryName={category.name} />
+    <CategoryItem key={category.id} categoryName={category.name} handleEditButton={handleEditButton} />
   ));
 
   return (

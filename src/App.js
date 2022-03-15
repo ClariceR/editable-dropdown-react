@@ -13,6 +13,7 @@ function App() {
 
   const [categoriesList, setCategoriesList] = useState(defaultCategories);
   const [categoryName, setCategoryName] = useState("");
+  const [isEdit, setIsEdit] = useState(false);
 
   const handleCategoryName = (e) => {
     setCategoryName(e.target.value);
@@ -29,6 +30,11 @@ function App() {
 
   const updateCategoriesList = (newCategory) => {
     return categoriesList.concat(newCategory);
+  };
+
+  const handleEditButton = () => {
+    setIsEdit(true);
+    toggle();
   };
 
   // create a new object with the new category name as name
@@ -51,12 +57,17 @@ function App() {
 
   return (
     <div className="App">
-      <DropdownCategories categoriesList={categoriesList} toggle={toggle} />
+      <DropdownCategories
+        categoriesList={categoriesList}
+        toggle={toggle}
+        handleEditButton={handleEditButton}
+      />
       <ModalCategories
         isShowing={isShowing}
         hide={toggle}
         handleCategoryName={handleCategoryName}
         saveNewCategory={saveNewCategory}
+        isEdit={isEdit}
       />
     </div>
   );
