@@ -63,6 +63,10 @@ function App() {
     toggle();
   };
 
+  const handleCancelButton = () => {
+    toggle();
+  }
+
   return (
     <div className="App">
       <DropdownCategories
@@ -81,6 +85,7 @@ function App() {
         selectedCategory={selectedCategory}
         handleDeleteCategory={handleDeleteButton}
         handleUpdateCategory={handleUpdateCategory}
+        handleCancelButton={handleCancelButton}
       />
     </div>
   );

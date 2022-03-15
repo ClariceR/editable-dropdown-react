@@ -6,6 +6,7 @@ function ModalFooter({
   selectedCategory,
   handleDeleteCategory,
   handleUpdateCategory,
+  handleCancelButton,
 }) {
   return (
     <div className="modal-footer">
@@ -14,7 +15,7 @@ function ModalFooter({
           className="save-button"
           onClick={() => handleUpdateCategory(selectedCategory.id)}
         >
-          Update
+          Save
         </button>
       )}
       {!isEdit && (
@@ -22,6 +23,11 @@ function ModalFooter({
           Save
         </button>
       )}
+
+      <button className="save-button" onClick={handleCancelButton}>
+        Cancel
+      </button>
+
       {isEdit && (
         <button onClick={() => handleDeleteCategory(selectedCategory.id)}>
           Delete
