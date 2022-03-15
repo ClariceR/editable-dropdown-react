@@ -10,29 +10,36 @@ function ModalFooter({
 }) {
   return (
     <div className="modal-footer">
-      {isEdit && (
-        <button
-          className="save-button"
-          onClick={() => handleUpdateCategory(selectedCategory.id)}
-        >
-          Save
-        </button>
-      )}
-      {!isEdit && (
-        <button className="save-button" onClick={saveNewCategory}>
-          Save
-        </button>
-      )}
+      <div className="left">
+        {isEdit && (
+          <button
+            className="button-default"
+            onClick={() => handleUpdateCategory(selectedCategory.id)}
+          >
+            Save
+          </button>
+        )}
+        {!isEdit && (
+          <button className="button-default" onClick={saveNewCategory}>
+            Save
+          </button>
+        )}
 
-      <button className="save-button" onClick={handleCancelButton}>
-        Cancel
-      </button>
-
-      {isEdit && (
-        <button onClick={() => handleDeleteCategory(selectedCategory.id)}>
-          Delete
+        <button className="button-secondary" onClick={handleCancelButton}>
+          Cancel
         </button>
-      )}
+      </div>
+
+      <div className="right">
+        {isEdit && (
+          <a
+            className="warning-link"
+            onClick={() => handleDeleteCategory(selectedCategory.id)}
+          >
+            Delete
+          </a>
+        )}
+      </div>
     </div>
   );
 }

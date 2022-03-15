@@ -26,6 +26,7 @@ function DropdownCategories({
         <div className="dropdown-categories__handler">
           <p className="dropdown-categories__selected">
             {selectedCategory.name}
+            <span className="v">V</span>
           </p>
         </div>
         <div className="dropdown-categories__list">

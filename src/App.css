@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 a {
   display: block;
   text-decoration: none;
@@ -32,14 +36,15 @@ a {
   border: 1px solid gray;
   border-radius: 3px;
   cursor: pointer;
-  display: flex;
   padding: 0.2rem 1rem;
   position: relative;
-  width: 160px;
+  min-width: max-content;
 }
 
 .v {
+  display: inline-block;
   background-color: lightblue;
+  margin-left: 20px;
 }
 
 .dropdown-categories__list {
@@ -47,16 +52,13 @@ a {
   border-radius: 3px;
   display: flex;
   flex-flow: column;
-  max-width: 50rem;
-  min-width: 180px;
   position: absolute;
   top: 193px;
-  width: max-content;
-  padding-top: 10px;
+  min-width: max-content;
 }
 
 .dropdown-categories__name {
-  margin: 3px 0 8px 0;
+  margin: 8px 0;
 }
 
 .dropdown-categories__name:hover {
@@ -139,6 +141,12 @@ button {
 .button-default {
   background: #247BA0;
   color: #fff;
+  margin-right: 15px;
+}
+
+.warning-link {
+  display: inline-block;
+  color: red;
 }
 
 .category-input {
@@ -149,10 +157,17 @@ button {
 .modal-footer {
   border-top: 1px solid lightgray;
   margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding-top: 10px;
 }
 
 .save-button {
   margin-top: 1rem;
+}
+
+.right {
+  justify-self: end;
 }
 
 
