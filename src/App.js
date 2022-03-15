@@ -12,7 +12,7 @@ function App() {
   const [categoryName, setCategoryName] = useState("");
 
   const handleCategoryName = e => {
-    console.log(e.target.value);
+    setCategoryName(e.target.value);
   };
 
   // const [isAdd, setIsAdd] = useState(false);
@@ -23,9 +23,14 @@ function App() {
   //   console.log(isAdd)
   // };
 
+  // console.log(
+  //   "categories:",
+  //   categoriesList.map((category) => category.name)
+  // );
+
   console.log(
-    "categories:",
-    categoriesList.map((category) => category.name)
+    "new category name:",
+    categoryName
   );
 
   return (
