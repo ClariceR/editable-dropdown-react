@@ -6,10 +6,14 @@ import useModal from "./components/useModal";
 
 function App() {
   const defaultCategories = [{ name: "one" }, { name: "two" }];
+  const { isShowing, toggle } = useModal();
 
   const [categoriesList, setCategoriesList] = useState(defaultCategories);
+  const [categoryName, setCategoryName] = useState("");
 
-  const {isShowing, toggle} = useModal();
+  const handleCategoryName = e => {
+    console.log(e.target.value);
+  };
 
   // const [isAdd, setIsAdd] = useState(false);
 
@@ -26,11 +30,12 @@ function App() {
 
   return (
     <div className="App">
-      <DropdownCategories
-        categoriesList={categoriesList}
-        toggle={toggle}
+      <DropdownCategories categoriesList={categoriesList} toggle={toggle} />
+      <ModalCategories
+        isShowing={isShowing}
+        hide={toggle}
+        handleCategoryName={handleCategoryName}
       />
-      <ModalCategories isShowing={isShowing} hide={toggle}/>
     </div>
   );
 }
