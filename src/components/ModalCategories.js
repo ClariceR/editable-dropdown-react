@@ -14,6 +14,15 @@ const ModalCategories = ({ isShowing, hide }) =>
                   <span>&times;</span>
                 </button>
               </div>
+
+              <div className="modal-body">
+                  <label htmlFor="category_name" className="category-name">Name</label>
+                  <input type="text" className="category-input"/>
+              </div>
+
+              <div className="modal-footer">
+                  <button className="save-button">Save</button>
+              </div>
             </div>
           </div>
         </React.Fragment>,

@@ -106,6 +106,7 @@ a {
 .modal-header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
 .modal-close-button {
@@ -124,12 +125,25 @@ button {
   border: none;
   border-radius: 3px;
   padding: .3rem 1rem;
-  margin-left: .5rem;
 }
 
 .button-default {
   background: #247BA0;
   color: #fff;
+}
+
+.category-input {
+  margin-left: 2rem;
+  padding: 0.5rem;
+}
+
+.modal-footer {
+  border-top: 1px solid lightgray;
+  margin-top: 2rem;
+}
+
+.save-button {
+  margin-top: 1rem;
 }
 
 
