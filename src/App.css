@@ -39,7 +39,8 @@ a {
   cursor: pointer;
   padding: 0.2rem 1rem;
   position: relative;
-  min-width: max-content;
+  min-width: 160px;
+  max-width: max-content;
 }
 
 .v {
@@ -54,12 +55,15 @@ a {
   display: flex;
   flex-flow: column;
   position: absolute;
+  text-align: left;
   top: 193px;
-  min-width: max-content;
+  min-width: 160px;
+  max-width: max-content;
 }
 
 .dropdown-categories__name {
   margin: 8px 0;
+  padding-left: 1rem;
 }
 
 .dropdown-categories__name:hover {
@@ -78,7 +82,6 @@ a {
 
 /* Modal */
 
-
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -87,7 +90,7 @@ a {
   width: 100vw;
   height: 100vh;
   background-color: #000;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .modal-wrapper {
@@ -123,22 +126,22 @@ a {
   font-weight: 700;
   line-height: 1;
   color: #000;
-  opacity: .3;
+  opacity: 0.3;
   cursor: pointer;
   border: none;
 }
 
 button {
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 700;
   border: none;
   border-radius: 3px;
-  padding: .3rem 1rem;
+  padding: 0.3rem 1rem;
   cursor: pointer;
 }
 
 .button-default {
-  background: #247BA0;
+  background: #247ba0;
   color: #fff;
   margin-right: 15px;
 }
@@ -168,5 +171,3 @@ button {
 .right {
   justify-self: end;
 }
-
-
