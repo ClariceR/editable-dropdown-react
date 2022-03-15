@@ -1,6 +1,6 @@
 ## Editable Dropdown Feature
 
-In this project I implemented the basic functionalities for an editable dropdown component.
+In this project I implemented the basic functionality for an editable dropdown component.
 Users can view, add, edit and delete categories.
 
 Both the 'Add' and the 'Edit' buttons open the same modal and the modal will have the functionality according with the button clicked.
