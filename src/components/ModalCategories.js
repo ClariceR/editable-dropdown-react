@@ -1,17 +1,24 @@
-import React from 'react'
+import React from "react";
+import ReactDOM from "react-dom";
 
-function ModalCategories({isAdd}) {
-    if (isAdd) {
-       <div className="modal__wrapper">
-         <div class="modal__body-input">
-           <label for="category_name" class="u-push-right--half">
-             Name
-           </label>
-           <input type="text" />
-         </div>
-       </div>; 
-    }
-  return null;
-}
+const ModalCategories = ({ isShowing, hide }) =>
+  isShowing
+    ? ReactDOM.createPortal(
+        <React.Fragment>
+          <div className="modal-overlay" />
+          <div className="modal-wrapper">
+            <div className="modal">
+              <div className="modal-header">
+                <h3>Add category</h3>
+                <button className="modal-close-button">
+                  <span>&times;</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </React.Fragment>,
+        document.body
+      )
+    : null;
 
-export default ModalCategories
+export default ModalCategories;

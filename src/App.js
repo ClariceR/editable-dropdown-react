@@ -2,18 +2,22 @@ import React, { useState } from "react";
 import "./App.css";
 import DropdownCategories from "./components/DropdownCategories";
 import ModalCategories from "./components/ModalCategories";
+import useModal from "./components/useModal";
 
 function App() {
   const defaultCategories = [{ name: "one" }, { name: "two" }];
 
   const [categoriesList, setCategoriesList] = useState(defaultCategories);
-  const [isAdd, setIsAdd] = useState(false);
 
-  const handleAddCategory = (e) => {
-    e.preventDefault();
-    setIsAdd(true);
-    console.log(isAdd)
-  };
+  const {isShowing, toggle} = useModal();
+
+  // const [isAdd, setIsAdd] = useState(false);
+
+  // const handleAddCategory = (e) => {
+  //   e.preventDefault();
+  //   setIsAdd(true);
+  //   console.log(isAdd)
+  // };
 
   console.log(
     "categories:",
@@ -24,9 +28,9 @@ function App() {
     <div className="App">
       <DropdownCategories
         categoriesList={categoriesList}
-        handleAddCategory={handleAddCategory}
+        toggle={toggle}
       />
-      <ModalCategories isAdd={isAdd} />
+      <ModalCategories isShowing={isShowing} hide={toggle}/>
     </div>
   );
 }
