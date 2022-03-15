@@ -9,6 +9,7 @@ const ModalCategories = ({
   handleCategoryName,
   saveNewCategory,
   isEdit,
+ 
 }) =>
   isShowing
     ? ReactDOM.createPortal(
@@ -29,7 +30,7 @@ const ModalCategories = ({
                 />
               </div>
 
-              <ModalFooter saveNewCategory={saveNewCategory} isEdit={isEdit}/>
+              <ModalFooter saveNewCategory={saveNewCategory} isEdit={isEdit} />
             </div>
           </div>
         </React.Fragment>,

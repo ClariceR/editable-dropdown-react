@@ -5,6 +5,8 @@ function DropdownCategories({
   categoriesList,
   handleAddButton,
   handleEditButton,
+  selectedCategory,
+  onSelectedCategoryChange,
 }) {
   const categoriesNames = categoriesList.map((category) => (
     <CategoryItem
@@ -21,7 +23,7 @@ function DropdownCategories({
       <div className="dropdown-categories__dropdown">
         <div className="dropdown-categories__handler">
           <p className="dropdown-categories__selected">
-            Selected Category <span className="v">v</span>
+            {selectedCategory.name}
           </p>
         </div>
         <div className="dropdown-categories__list">
