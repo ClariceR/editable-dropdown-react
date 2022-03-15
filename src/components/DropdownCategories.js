@@ -11,8 +11,10 @@ function DropdownCategories({
   const categoriesNames = categoriesList.map((category) => (
     <CategoryItem
       key={category.id}
+      category={category}
       categoryName={category.name}
       handleEditButton={handleEditButton}
+      onSelectedCategoryChange={onSelectedCategoryChange}
     />
   ));
 
