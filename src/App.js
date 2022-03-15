@@ -5,7 +5,10 @@ import ModalCategories from "./components/ModalCategories";
 import useModal from "./components/useModal";
 
 function App() {
-  const defaultCategories = [{ name: "one" }, { name: "two" }];
+  const defaultCategories = [
+    { name: "one", id: 1 },
+    { name: "two", id: 2 },
+  ];
   const { isShowing, toggle } = useModal();
 
   const [categoriesList, setCategoriesList] = useState(defaultCategories);
@@ -16,7 +19,7 @@ function App() {
   };
 
   const saveNewCategory = () => {
-    const newCategory = { name: categoryName };
+    const newCategory = { name: categoryName, id: Date.now() };
     const newCategoriesList = updateCategoriesList(newCategory);
     console.log(newCategory);
     console.log(newCategoriesList);
@@ -44,7 +47,7 @@ function App() {
   //   categoriesList.map((category) => category.name)
   // );
 
-  console.log("new category name:", categoryName);
+  // console.log("new category name:", categoryName);
 
   return (
     <div className="App">

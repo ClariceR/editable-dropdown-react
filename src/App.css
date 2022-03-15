@@ -1,5 +1,6 @@
 a {
   display: block;
+  text-decoration: none;
 }
 
 .App {
@@ -54,8 +55,16 @@ a {
   padding-top: 10px;
 }
 
+.dropdown-categories__name {
+  margin: 3px 0 8px 0;
+}
+
 .dropdown-categories__name:hover {
   background-color: aqua;
+}
+
+.edit-link {
+  background-color: lightblue;
 }
 
 .dropdown-categories__footer {
