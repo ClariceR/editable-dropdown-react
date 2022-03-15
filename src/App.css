@@ -10,7 +10,7 @@ a {
   /* border: 1px solid green; */
   margin-top: 8rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   gap: 2rem;
 }
 
@@ -59,7 +59,15 @@ a {
 }
 
 .dropdown-categories__footer {
-  border-top: 1px solid var(--base-border-color);
+  border-top: 1px solid gray;
   padding: 14px 20px;
-  margin-top: 80px;
+  margin-top: 18px;
 }
+
+/* Modal */
+
+.modal__wrapper {
+  background-color: lightgray;
+}
+
+
