@@ -11,9 +11,25 @@ function App() {
   const [categoriesList, setCategoriesList] = useState(defaultCategories);
   const [categoryName, setCategoryName] = useState("");
 
-  const handleCategoryName = e => {
+  const handleCategoryName = (e) => {
     setCategoryName(e.target.value);
   };
+
+  const saveNewCategory = () => {
+    const newCategory = { name: categoryName };
+    const newCategoriesList = updateCategoriesList(newCategory);
+    console.log(newCategory);
+    console.log(newCategoriesList);
+    setCategoriesList(newCategoriesList);
+    toggle();
+  };
+
+  const updateCategoriesList = (newCategory) => {
+    return categoriesList.concat(newCategory);
+  };
+
+  // create a new object with the new category name as name
+  // update the categories list to show the new category name
 
   // const [isAdd, setIsAdd] = useState(false);
 
@@ -28,10 +44,7 @@ function App() {
   //   categoriesList.map((category) => category.name)
   // );
 
-  console.log(
-    "new category name:",
-    categoryName
-  );
+  console.log("new category name:", categoryName);
 
   return (
     <div className="App">
@@ -40,6 +53,7 @@ function App() {
         isShowing={isShowing}
         hide={toggle}
         handleCategoryName={handleCategoryName}
+        saveNewCategory={saveNewCategory}
       />
     </div>
   );

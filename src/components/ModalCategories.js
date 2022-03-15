@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const ModalCategories = ({ isShowing, hide, handleCategoryName }) =>
+const ModalCategories = ({ isShowing, hide, handleCategoryName, saveNewCategory }) =>
   isShowing
     ? ReactDOM.createPortal(
         <React.Fragment>
@@ -27,7 +27,7 @@ const ModalCategories = ({ isShowing, hide, handleCategoryName }) =>
               </div>
 
               <div className="modal-footer">
-                <button className="save-button">Save</button>
+                <button className="save-button" onClick={saveNewCategory}>Save</button>
               </div>
             </div>
           </div>
