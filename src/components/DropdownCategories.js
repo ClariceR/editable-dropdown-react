@@ -3,7 +3,7 @@ import CategoryItem from "./CategoryItem";
 
 function DropdownCategories({ categoriesList, handleAddCategory, toggle }) {
   const categoriesNames = categoriesList.map((category) => (
-    <CategoryItem key={category.name} categoryName={category.name} />
+    <CategoryItem key={category.id} categoryName={category.name} />
   ));
 
   return (
