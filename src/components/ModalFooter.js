@@ -1,12 +1,12 @@
 import React from "react";
 
-function ModalFooter({ saveNewCategory, isEdit }) {
+function ModalFooter({ saveNewCategory, isEdit, selectedCategory, handleDeleteCategory }) {
   return (
     <div className="modal-footer">
       <button className="save-button" onClick={saveNewCategory}>
         Save
       </button>
-      {isEdit && <button>Delete</button>}
+      {isEdit && <button onClick={() => handleDeleteCategory(selectedCategory.id)}>Delete</button>}
     </div>
   );
 }

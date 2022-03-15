@@ -14,7 +14,9 @@ function App() {
   const [categoriesList, setCategoriesList] = useState(defaultCategories);
   const [categoryName, setCategoryName] = useState("");
   const [isEdit, setIsEdit] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState({name: "No category"})
+  const [selectedCategory, setSelectedCategory] = useState({
+    name: "No category",
+  });
 
   const handleCategoryName = (e) => {
     setCategoryName(e.target.value);
@@ -38,11 +40,17 @@ function App() {
 
   const handleEditButton = (currentCategory) => {
     setIsEdit(true);
-    console.log("selected category:", currentCategory)
+    console.log("selected category:", currentCategory);
     toggle();
   };
 
-  
+  const handleDeleteCategory = (id) => {
+    const newCategoriesList = categoriesList.filter(
+      (category) => category.id !== id
+    );
+    setCategoriesList(newCategoriesList);
+    toggle();
+  };
 
   return (
     <div className="App">
@@ -59,6 +67,8 @@ function App() {
         handleCategoryName={handleCategoryName}
         saveNewCategory={saveNewCategory}
         isEdit={isEdit}
+        selectedCategory={selectedCategory}
+        handleDeleteCategory={handleDeleteCategory}
       />
     </div>
   );

@@ -9,7 +9,8 @@ const ModalCategories = ({
   handleCategoryName,
   saveNewCategory,
   isEdit,
- 
+  selectedCategory,
+  handleDeleteCategory,
 }) =>
   isShowing
     ? ReactDOM.createPortal(
@@ -17,7 +18,7 @@ const ModalCategories = ({
           <div className="modal-overlay" />
           <div className="modal-wrapper">
             <div className="modal">
-              <ModalHeader hide={hide} isEdit={isEdit}/>
+              <ModalHeader hide={hide} isEdit={isEdit} />
 
               <div className="modal-body">
                 <label htmlFor="category_name" className="category-name">
@@ -30,7 +31,12 @@ const ModalCategories = ({
                 />
               </div>
 
-              <ModalFooter saveNewCategory={saveNewCategory} isEdit={isEdit} />
+              <ModalFooter
+                saveNewCategory={saveNewCategory}
+                isEdit={isEdit}
+                selectedCategory={selectedCategory}
+                handleDeleteCategory={handleDeleteCategory}
+              />
             </div>
           </div>
         </React.Fragment>,
