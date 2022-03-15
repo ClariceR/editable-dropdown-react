@@ -41,30 +41,7 @@ function App() {
     toggle();
   };
 
-  // const handleDeleteCategory = (id) => {
-  //   // const newCategoriesList = [...categoriesList]
-  //   // newCategoriesList.splice(index, 1)
-  //   // setCategoriesList(newCategoriesList)
-  //   console.log(id)
-  // }
-
-  // create a new object with the new category name as name
-  // update the categories list to show the new category name
-
-  // const [isAdd, setIsAdd] = useState(false);
-
-  // const handleAddCategory = (e) => {
-  //   e.preventDefault();
-  //   setIsAdd(true);
-  //   console.log(isAdd)
-  // };
-
-  // console.log(
-  //   "categories:",
-  //   categoriesList.map((category) => category.name)
-  // );
-
-  // console.log("new category name:", categoryName);
+  
 
   return (
     <div className="App">
