@@ -40,14 +40,25 @@ function App() {
 
   const handleEditButton = (currentCategory) => {
     setIsEdit(true);
-    console.log("selected category:", currentCategory);
     toggle();
   };
 
-  const handleDeleteCategory = (id) => {
+  const handleDeleteButton = (id) => {
     const newCategoriesList = categoriesList.filter(
       (category) => category.id !== id
     );
+    setCategoriesList(newCategoriesList);
+    toggle();
+  };
+
+  const handleUpdateCategory = (id) => {
+    const newCategoriesList = categoriesList.map((category) => {
+      if (category.id === id) {
+        const updatedCategory = { ...category, name: categoryName };
+        return updatedCategory;
+      }
+      return category;
+    });
     setCategoriesList(newCategoriesList);
     toggle();
   };
@@ -68,7 +79,8 @@ function App() {
         saveNewCategory={saveNewCategory}
         isEdit={isEdit}
         selectedCategory={selectedCategory}
-        handleDeleteCategory={handleDeleteCategory}
+        handleDeleteCategory={handleDeleteButton}
+        handleUpdateCategory={handleUpdateCategory}
       />
     </div>
   );

@@ -11,6 +11,7 @@ const ModalCategories = ({
   isEdit,
   selectedCategory,
   handleDeleteCategory,
+  handleUpdateCategory,
 }) =>
   isShowing
     ? ReactDOM.createPortal(
@@ -36,6 +37,7 @@ const ModalCategories = ({
                 isEdit={isEdit}
                 selectedCategory={selectedCategory}
                 handleDeleteCategory={handleDeleteCategory}
+                handleUpdateCategory={handleUpdateCategory}
               />
             </div>
           </div>
