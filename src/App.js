@@ -49,6 +49,7 @@ function App() {
       (category) => category.id !== id
     );
     setCategoriesList(newCategoriesList);
+    setSelectedCategory({ name: "No category" });
     toggle();
   };
 
