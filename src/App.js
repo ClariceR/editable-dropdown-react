@@ -6,8 +6,9 @@ import useModal from "./components/useModal";
 
 function App() {
   const defaultCategories = [
-    { name: "one", id: 1 },
-    { name: "two", id: 2 },
+    { name: "Drama", id: 1 },
+    { name: "Fiction", id: 2 },
+    { name: "Sports", id: 3 },
   ];
   const { isShowing, toggle } = useModal();
 
