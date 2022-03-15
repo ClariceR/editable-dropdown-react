@@ -39,7 +39,7 @@ function App() {
     toggle();
   };
 
-  const handleEditButton = (currentCategory) => {
+  const handleEditButton = () => {
     setIsEdit(true);
     toggle();
   };

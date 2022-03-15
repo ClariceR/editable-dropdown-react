@@ -5,6 +5,7 @@
 a {
   display: block;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .App {
@@ -77,9 +78,6 @@ a {
 
 /* Modal */
 
-/* .modal__wrapper {
-  background-color: lightgray;
-} */
 
 .modal-overlay {
   position: fixed;
@@ -136,6 +134,7 @@ button {
   border: none;
   border-radius: 3px;
   padding: .3rem 1rem;
+  cursor: pointer;
 }
 
 .button-default {
