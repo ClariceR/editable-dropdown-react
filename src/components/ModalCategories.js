@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import ModalFooter from "./ModalFooter";
 import ModalHeader from "./ModalHeader";
 
 const ModalCategories = ({
@@ -28,11 +29,7 @@ const ModalCategories = ({
                 />
               </div>
 
-              <div className="modal-footer">
-                <button className="save-button" onClick={saveNewCategory}>
-                  Save
-                </button>
-              </div>
+              <ModalFooter saveNewCategory={saveNewCategory} isEdit={isEdit}/>
             </div>
           </div>
         </React.Fragment>,

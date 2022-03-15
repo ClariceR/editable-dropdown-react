@@ -32,6 +32,11 @@ function App() {
     return categoriesList.concat(newCategory);
   };
 
+  const handleAddButton = () => {
+    setIsEdit(false);
+    toggle();
+  };
+
   const handleEditButton = () => {
     setIsEdit(true);
     toggle();
@@ -59,7 +64,7 @@ function App() {
     <div className="App">
       <DropdownCategories
         categoriesList={categoriesList}
-        toggle={toggle}
+        handleAddButton={handleAddButton}
         handleEditButton={handleEditButton}
       />
       <ModalCategories

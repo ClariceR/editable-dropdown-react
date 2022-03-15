@@ -1,9 +1,17 @@
 import React from "react";
 import CategoryItem from "./CategoryItem";
 
-function DropdownCategories({ categoriesList, toggle, handleEditButton }) {
+function DropdownCategories({
+  categoriesList,
+  handleAddButton,
+  handleEditButton,
+}) {
   const categoriesNames = categoriesList.map((category) => (
-    <CategoryItem key={category.id} categoryName={category.name} handleEditButton={handleEditButton} />
+    <CategoryItem
+      key={category.id}
+      categoryName={category.name}
+      handleEditButton={handleEditButton}
+    />
   ));
 
   return (
@@ -19,7 +27,7 @@ function DropdownCategories({ categoriesList, toggle, handleEditButton }) {
         <div className="dropdown-categories__list">
           <div>{categoriesNames}</div>
           <div className="dropdown-categories__footer">
-            <a href="#" onClick={toggle}>
+            <a href="#" onClick={handleAddButton}>
               + Add category
             </a>
           </div>
